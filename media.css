@@ -1,0 +1,359 @@
+@media (min-width: 1016px) {
+    .main-container {
+        width: 54%;
+        /* display: flex;
+        justify-content: center; */
+    }
+}
+
+@media (min-width: 1016px) and (max-width: 1155px) {
+    #s2-card-box1 {
+        transition: transform 350ms ease;
+    }
+
+    /* This is the final state of the element */
+    #s2-card-box1.more-detail-card1 {
+        transform: scale(1.2);
+        transition: transform 200ms ease-in-out;
+    }
+
+    /* This is the initial state of the element */
+    #s2-card-box2 {
+        transition: transform 350ms ease;
+    }
+
+    /* This is the final state of the element */
+    #s2-card-box2.more-detail-card1 {
+        transform: scale(1.2);
+        transition: transform 200ms ease-in-out;
+    }
+
+    #s2-card-box3 {
+        transition: transform 350ms ease;
+    }
+
+    /* This is the final state of the element */
+    #s2-card-box3.more-detail-card1 {
+        transform: scale(1.2);
+        transition: transform 200ms ease-in-out;
+    }
+
+    #s2-card-box4 {
+        transition: transform 350ms ease;
+    }
+
+    /* This is the final state of the element */
+    #s2-card-box4.more-detail-card1 {
+        transform: scale(1.2);
+        transition: transform 200ms ease-in-out;
+    }
+}
+
+@media (max-width:1080px) {
+    .s2-box-cont {
+        display: grid;
+        grid-template-columns: auto auto;
+        row-gap: 50px;
+    }
+}
+
+@media (max-width: 1015px) {
+    .starter {
+        width: 98%;
+    }
+
+    .nav-bar ul {
+        width: 98%;
+    }
+
+    .s-img img {
+        width: 488px;
+    }
+
+    .s2-box-cont {
+        flex-wrap: wrap;
+    }
+
+    .s2-box {
+        margin: 30px 20px 30px 20px;
+
+    }
+
+    .vidCont {
+        left: 12%;
+    }
+
+    .main-container {
+        width: 56%;
+        left: 20%;
+        width: 56%;
+        width: 680px;
+        /* display: flex;
+        justify-content: center; */
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1015px) {
+    .main-container {
+        left: 5%;
+    }
+}
+
+
+@media (min-width: 830px) {
+    .destination-container{
+        overflow-y: hidden;
+    }
+    .menuBtn {
+        display: none;
+    }
+    .menuSec{
+        display: none;
+    }
+
+}
+
+@media (max-width: 830px) {
+    #s2-card-box1.more-detail-card1 {
+        transform: scale(1.34);
+        transition: transform 200ms ease-in-out;
+    }
+
+    #s2-card-box2.more-detail-card1 {
+        transform: scale(1.34);
+        transition: transform 200ms ease-in-out;
+    }
+
+    #s2-card-box3.more-detail-card1 {
+        transform: scale(1.34);
+        transition: transform 200ms ease-in-out;
+    }
+
+    #s2-card-box4.more-detail-card1 {
+        transform: scale(1.34);
+        transition: transform 200ms ease-in-out;
+    }
+
+    .nav-buttons {
+        display: none;
+    }
+
+
+    .menuItems {
+        list-style: none;
+    }
+
+    .s4-main-cont {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .s4-cont1 {
+        width: 100%;
+    }
+
+    .s4-cont2 {
+        right: 100px;
+    }
+
+    .section4 {
+        height: 930px;
+    }
+
+    .section5 {
+        height: 100%;
+    }
+
+    .s5-cont1 {
+        height: 517px;
+    }
+
+    .s5-cont2 {
+        width: 95%;
+    }
+
+    .s5-main-cont {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-dock {
+        position: absolute;
+        top: 4rem;
+        right: 10rem;
+        background-color: rgba(255, 255, 255, 0.95);
+        padding: 12px 16px;
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        animation: fadeSlide 0.3s ease-in-out;
+      }
+      .nav-dock.show {
+        display: flex;
+      }
+
+      @keyframes fadeSlide {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+}
+
+@media (min-width: 700px) and (max-width: 830px) {
+    .s7-sub-cont {
+        column-gap: 0px;
+    }
+
+    .s-img img {
+        width: 470px;
+    }
+
+    .vidCont {
+        left: 4%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .vidCont iframe {
+        width: 649px;
+        height: 365px;
+    }
+}
+
+@media (max-width: 700px) {
+    .s7-main-cont {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .starter {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 630px) {
+    .s7-main-cont {
+        flex-direction: column;
+        align-items: inherit;
+        gap: 12px;
+    }
+
+    .s-img img {
+        width: 400px;
+    }
+
+}
+
+
+@media (max-width: 540px) {
+    .s4-cont2 {
+        position: relative;
+        right: 130px;
+    }
+
+    .s2-box-container {
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .section4 {
+        height: 1000px;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 500px) {
+    .s7-sub-cont {
+        gap: 0;
+    }
+
+    .grid-heads {
+        font-size: 18px;
+    }
+
+    .grid-item {
+        font-size: 17px;
+    }
+
+    .s4-cont2 {
+        width: 470px;
+    }
+
+    .s7-cont2 {
+        align-self: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .grid-cells {
+        padding: 6px 0px 6px 0px;
+    }
+
+    .s4-cont2 {
+        width: 450px;
+    }
+
+    .grid-heads {
+        font-size: 16px;
+    }
+
+    .grid-item {
+        font-size: 14px;
+    }
+
+    .s-cont1 {
+        width: 350px;
+    }
+
+    .s-img img {
+        width: 315px;
+    }
+
+    .s4-sub-cont2 {
+        display: none;
+    }
+
+    .main-heading {
+        font-size: 50px;
+    }
+
+    .starter-content {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 250px) and (max-width: 350px) {
+    /* .section1{
+        padding: 10px 10px 10px 20px;
+    }
+    .section2{
+        padding: 10px 10px 10px 20px;
+    }
+    .section3{
+        padding: 10px 10px 10px 20px;
+    }
+    .section4{
+        padding: 10px 10px 10px 20px;
+    }
+    .section5{
+        padding: 10px 10px 10px 20px;
+    }
+    .section6{
+        padding: 10px 10px 10px 20px;
+    }
+    .section7{
+        padding: 10px 10px 10px 20px;
+    } */
+
+
+
+}

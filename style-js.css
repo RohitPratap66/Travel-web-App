@@ -1,0 +1,540 @@
+/* This is the initial state of the element */
+#s2-card-box1{
+    transition: transform 350ms ease;
+}
+/* This is the final state of the element */
+#s2-card-box1.more-detail-card1{
+    transform: scale(1.4);
+    transition: transform 200ms ease-in-out;
+}
+/* This is the initial state of the element */
+#s2-card-box2{
+    transition: transform 350ms ease;
+}
+/* This is the final state of the element */
+#s2-card-box2.more-detail-card1{
+    transform: scale(1.4);
+    transition: transform 200ms ease-in-out;
+}
+#s2-card-box3{
+    transition: transform 350ms ease;
+}
+/* This is the final state of the element */
+#s2-card-box3.more-detail-card1{
+    transform: scale(1.4);
+    transition: transform 200ms ease-in-out;
+}
+#s2-card-box4{
+    transition: transform 350ms ease;
+}
+/* This is the final state of the element */
+#s2-card-box4.more-detail-card1{
+    transform: scale(1.4);
+    transition: transform 200ms ease-in-out;
+}
+.new-styles-card{
+    height: 250px;
+    width: 180px;
+}
+.new-styles-img-card1, .new-styles-img-card2, .new-styles-img-card3, .new-styles-img-card4{
+    width: 45px;
+}
+.new-heding-styles-card1, .new-heding-styles-card2, .new-heding-styles-card3, .new-heding-styles-card4{
+    font-size: 13px;
+    text-align: center;
+}
+.new-content-styles-card1, .new-content-styles-card2, .new-content-styles-card3, .new-content-styles-card4{
+    font-size: 11px;
+    text-align: center;
+}
+
+.card-heading {
+    text-align: center;
+    font-family: "Volkhov", sans-serif;
+    margin: 0 auto 0 auto;
+}
+
+.card-details {
+    text-align: center;
+    font-family: "Poppins";
+    color: #5E6282;
+    font-size: 15px;
+    margin: 5px auto 0 auto;
+    font-weight: 500;
+    line-height: 17px;
+}
+
+/* card1 css started */
+
+.sub-cont {
+    padding: 10px;
+}
+
+.card-subheading {
+    font-family: "Poppins";
+    margin: 2px auto 0 auto;
+}
+
+.items {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    margin: 2px;
+    letter-spacing: 0.2px;
+    color: #5E6282;
+    line-height: 15px;
+}
+
+.list-items {
+    margin: 2px auto 0 auto;
+}
+
+.btn-cont {
+    display: flex;
+    justify-content: center;
+}
+.cardsBtn {
+    border: none;
+    background-color: #f1a501;
+    padding: 9px 14px 9px 14px;
+    font-size: 9px;
+    color: white;
+    border-radius: 14px 3px 14px 3px;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: "Poppins";
+}
+
+.animation{
+    transform: scale(0.9) rotateX(20deg);
+    transition: transform 200ms ease-in-out;
+    box-shadow: -1px 7px 23px -7px chocolate;
+}
+
+#CTA-Btn2{
+    transform: scale(1);
+    transition: transform 300ms ease-in-out;
+}
+
+#CTA-Btn2.demoBtn{
+    transform: scale(1.1) rotateX(20deg);
+    transition: transform 200ms ease-in-out;
+}
+.vidCont{
+    /* border: 1px solid grey; */
+    width: 709px;
+    position: absolute;
+    top: 90px;
+    left: 30%;
+}
+.vidCont iframe{
+    width: 709px;
+    height: 399px;
+    border-radius: 6px;
+    box-shadow: -6px 12px 18px 15px #464646a1;
+}
+
+.vidCont img{
+    position: relative;
+    left: 47%;
+    border: 1px solid black;
+    border-radius: 40px;
+    width: 33px;
+    padding: 8px;
+    margin-top: 12px;
+}
+/* .blur-bg{
+    backdrop-filter: brightness(0.2) blur(64px) contrast(0.9);
+    background: #444444a8;
+} */
+
+.closeBtn{
+    cursor: pointer;
+}
+#s3-card-id{
+    transform: scale(1);
+    transition: transform 250ms ease-in-out;
+}
+
+#s3-card-id.s3-card-details{
+    transform: scale(1.1);
+    transition: transform 280ms ease-in-out;
+    height: 450px;
+}
+
+/* CSS of weather portion */
+
+.container {
+    /* border: 1px solid rgb(0, 0, 0); */
+    width: 570px;
+    /* height: 200px; */
+    border-radius: 25px;
+    position: absolute;
+    z-index: 2;
+    /* top: 22%;
+    left: 26%; */
+}
+
+.bar {
+    border: 1px solid grey;
+    width: 76px;
+    height: 11px;
+    display: block;
+    border-radius: 10px;
+}
+
+.logos img {
+    width: 50px;
+}
+
+.sub-cont {
+    display: flex;
+    padding: 20px 0 0 0;
+    justify-content: space-around;
+}
+
+.s-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: #f5f5f5c9;
+    padding: 12px 10px 34px 10px;
+    border-radius: 15px;
+    box-shadow: -4px 6px 8px 2px #e5e1e1;
+}
+
+.bar {
+    background-color: #f1a501;
+}
+
+/* Trnsitions start here */
+/* s1 */
+
+.s1-main {
+    transform: none;
+    transition: all 500ms ease;
+}
+
+#S1 {
+    transform: translateX(0px) translateY(0px);
+    transition: transform 800ms ease-in-out;
+}
+
+#S1.trans-s1 {
+    transform: translateX(237px) translateY(153px);
+    transition: transform 950ms ease-in-out;
+    position: absolute;
+    left: 0;
+    top: 15%;
+    left: 0%;
+}
+
+#S1 {
+    width: 75px;
+    height: 90px;
+    top: 0;
+    left: 0;
+    position: relative;
+    transition: all 0.5s ease;
+    z-index: 1;
+    cursor: pointer;
+}
+
+#S1.full-cast {
+    transition: all 500ms ease;
+    width: 533px;
+    height: 282px;
+    z-index: 10;
+    left: -40%;
+    top: -94%;
+    background: #e5e5e5f5;
+}
+
+/* s2 */
+#S2 {
+    transform: translateX(0px) translateY(0px);
+    transition: transform 500ms ease-in-out;
+}
+
+#S2.trans-s1 {
+    transform: translateX(102px) translateY(144px);
+    transition: transform 950ms ease-in-out;
+    position: absolute;
+    left: 140px;
+}
+
+#S2 {
+    width: 75px;
+    height: 90px;
+    top: 0;
+    left: 0;
+    position: relative;
+    transition: all 0.5s ease;
+    z-index: 1;
+    cursor: pointer;
+}
+
+#S2.full-cast {
+    transition: all 500ms ease;
+    width: 533px;
+    height: 282px;
+    z-index: 10;
+    left: -16%;
+    top: -89%;
+    background: #e5e5e5f5;
+}
+
+/* s3 */
+#S3 {
+    transform: translateX(0px) translateY(0px);
+    transition: transform 500ms ease-in-out;
+}
+
+#S3.trans-s1 {
+    transform: translateX(0) translateY(153px);
+    transition: transform 950ms ease-in-out;
+    position: absolute;
+    left: 250px;
+}
+
+#S3 {
+    width: 75px;
+    height: 90px;
+    top: 0;
+    left: 0;
+    position: relative;
+    transition: all 0.5s ease;
+    z-index: 1;
+    cursor: pointer;
+}
+
+#S3.full-cast {
+    transition: all 500ms ease;
+    width: 533px;
+    height: 282px;
+    z-index: 10;
+    left: 2%;
+    top: -94%;
+    background: #e5e5e5f5;
+}
+
+/*  s4*/
+#S4 {
+    transform: translateX(0px) translateY(0px);
+    transition: transform 500ms ease-in-out;
+}
+
+#S4.trans-s1 {
+    transform: translateX(257%) translateY(153px);
+    transition: transform 950ms ease-in-out;
+    position: absolute;
+    right: 80px;
+
+}
+
+#S4 {
+    width: 75px;
+    height: 90px;
+    top: 0;
+    left: 0;
+    position: relative;
+    transition: all 0.5s ease;
+    z-index: 1;
+    cursor: pointer;
+}
+
+#S4.full-cast {
+    transition: all 500ms ease;
+    width: 533px;
+    height: 282px;
+    z-index: 10;
+    left: -247%;
+    top: -94%;
+    background: #e5e5e5f5;
+}
+
+/* s5 */
+#S5 {
+    transform: translateX(0px) translateY(0px);
+    transition: transform 500ms ease-in-out;
+}
+
+#S5.trans-s1 {
+    transform: translateX(255%) translateY(153px);
+    transition: transform 950ms ease-in-out;
+    position: absolute;
+    right: 0;
+
+}
+
+#S5 {
+    width: 75px;
+    height: 90px;
+    top: 0;
+    left: 0;
+    position: relative;
+    transition: all 0.5s ease;
+    z-index: 1;
+    cursor: pointer;
+}
+
+#S5.full-cast {
+    transition: all 500ms ease;
+    width: 533px;
+    height: 282px;
+    z-index: 10;
+    left: -245%;
+    top: -94%;
+    background: #e5e5e5f5;
+}
+
+/* transitions end here */
+
+.W-btn {
+    position: absolute;
+    right: 48%;
+    top: 225%;
+    border-radius: 20px;
+    width: 31px;
+    height: 30px;
+    font-size: 25px;
+    text-align: center;
+    padding: 0px 2px 28px 2px;
+    background: white;
+    cursor: pointer;
+}
+
+.temp{
+    margin-left: 11px;
+    font-family: 'Poppins';
+    font-size: 50px;
+}
+.main-container{
+    position: absolute;
+    width: 42%;
+    height: 55%;
+    border: 1px solid grey;
+    /* display: flex; */
+    left: 29%;
+    border-radius: 20px;
+    background: white;
+    box-shadow: -7px 20px 42px -1px #4a4a4ae3;
+}
+.main-cont-close{
+    width: 32px;
+    height: 32px;
+    border-radius: 35px;
+    border: 2px solid grey;
+    font-size: 25px;
+    padding: 0px 1px 6px 1px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    cursor: pointer;
+}
+.cont-W{
+    position: relative;
+    top: 50px;
+    left: 130px;
+}
+.input-W{
+    padding: 5px 50px 5px 4px;
+}
+.button-W{
+    padding: 6px 2px 6px 2px;
+    background-color: #f1a501;
+    color: white;
+    border: 1px solid grey;
+}
+.WeatherData{
+    display: flex;
+    justify-content: unset;
+    align-items: baseline;
+}
+.Desc{
+    margin-left: 18px;
+    font-size: 15px;
+    font-family: 'Poppins';
+}
+.NameC{
+    font-size: 15px;
+    font-family: 'Poppins';
+}
+
+
+.moreBtn {
+    display: flex;
+    border: 1px solid grey;
+    width: 100px;
+    padding: 1px 21px 1px 13px;
+    border-radius: 26px;
+    height: 50px;
+    align-items: center;
+    gap: 6px;
+    margin-left: 60px;
+    background-color: #ddddddab;
+}
+
+.moreBtn img {
+    width: 26px;
+}
+
+.text {
+    font-family: sans-serif;
+    font-weight: 500;
+}
+.menuSectionDY{
+    border: 1px solid grey;
+}
+.T1span{
+    transform: translateX(0);
+    transition: transform 500ms ease-in-out;
+}
+.T1span.thoughtTrans{
+    transform: translateX(-366px);
+    transition: all 500ms ease-in-out;
+}
+
+.T2span{
+    transform: translateX(100);
+    transition: transform 500ms ease-in-out;
+}
+.T2span.thought2Trans{
+    transform: translateX(-393px);
+    transition: all 500ms ease-in-out;
+}
+.T2span{
+    transform: translateX(100px);
+    transition: transform 500ms ease-in-out;
+}
+.T2span.thought2TransOUT{
+    transform: translateX(-765px);
+    transition: all 500ms ease-in-out;
+}
+.T3span{
+    transform: translateX(100px);
+    transition: all 500ms ease-in-out;
+}
+.T3span.thought3Trans{
+    transform: translateX(-786px);
+    transition: all 500ms ease-in-out;
+}
+ 
+
+/* //////////////CSS for the nav-dynamically added during the media query */
+
+.menuItems {
+    list-style: none;
+}
+.mediaWeather{
+        position: absolute;
+        width: 99%;
+        height: 100%;
+        border: 1px solid grey;
+        display: flex;
+        justify-content: center;
+        left: 0%;
+        border-radius: 20px;
+        background: white;
+        box-shadow: -7px 20px 42px -1px #4a4a4ae3;
+}

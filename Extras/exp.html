@@ -1,0 +1,290 @@
+<!-- NOTE: understand Foreach loop -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetch data from an API</title>
+    <style>
+        .destination-cont {
+            border: 1px solid gray;
+            width: 80%;
+            height: 600px;
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NOTE: HTMl of data getting using the LOCAL API -->
+    <!-- <div class="destination-cont" id="destination-list">
+
+
+    </div> -->
+
+    <script>
+
+        // NOTE: Get data using the API.
+
+        async function main() {
+            try {
+                let Response = await fetch("destinations.json")
+                if (!Response.ok) {
+                    throw SyntaxError("Network error")
+                }
+                let destinationData = await Response.json()
+                console.log(destinationData);
+
+                // console.log(subCont);
+                destinationData.forEach(destination => {
+                    let subCont = document.createElement("div");
+                    subCont.setAttribute('class', 'sub-cont');
+                    document.querySelector(".destination-cont").insertAdjacentElement("afterbegin", subCont);
+
+                    subCont.innerHTML = `
+                    <img src="${destination.image}" alt="${destination.image}">
+                    <h2>${destination.name}</h2>
+                    <p>${destination.price}</p>
+                    <p>${destination.duration}</p>
+                    <p>${destination.description}</p>
+                    
+                    `;
+                });
+
+
+            } catch (error) {
+                console.log("something is wrong with network");
+                console.log(error.name)
+                console.log(error.message)
+                console.log(error.stack)
+            }
+
+        }
+
+        // main()
+
+    </script>
+
+
+    <!-- ///////////////////end here if this HTML -->
+
+    <!-- NOTE: HTML of getting data from the INTERNET using the API -->
+
+    <div id="weather">
+        <h2>Weather in Your City</h2>
+        <!-- <p id="city"></p> -->
+        <input id="cityinput" type="text" placeholder="Enter city name">
+        <button id="btn">Check Weather</button>
+        <p id="city"></p>
+        <p id="temp"></p>
+        <p id="desc"></p>
+    </div>
+
+    <script>
+        async function weatherUpdate(city) {
+            document.getElementById("btn").addEventListener("click", () => {
+                let city = document.getElementById("cityinput").value;
+                if (city) {
+                    weatherUpdate(city);
+                } else {
+                    alert("please enter a city name.");
+                }
+            })
+            try {
+                // let city = prompt(`${cityname}`);
+
+                let Response = await fetch(`http://api.weatherstack.com/current?access_key=b306946c3cd0f0b87b4d8c8240a9fc47&query=${city}`);
+
+                if (!Response.ok) {
+                    throw new Error(`Network error(Response), try again later: ${Response.status}`);
+                }
+                let weatherData = await Response.json()
+                console.log(weatherData);
+                document.getElementById("city").textContent = `city: ${weatherData.name}`
+                document.getElementById("temp").textContent = `Tempreature: ${weatherData.main.temp}`
+                document.getElementById("desc").textContent = `Description: ${weatherData.weather[0].description}`
+            } catch (error) {
+                console.log("Check Again, something is wrong");
+                console.log(error.name)
+                console.log(error.message)
+                console.log(error.stack)
+            }
+        }
+
+        weatherUpdate()
+
+
+
+
+    </script>
+    
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: darkcyan;
+        }
+        .frosted-glass {
+            background: rgba(255, 255, 255, 0.5);
+            /* Semi-transparent background */
+            backdrop-filter: blur(10px);
+            /* Apply blur to the backdrop */
+            -webkit-backdrop-filter: blur(10px);
+            /* Safari compatibility */
+            border-radius: 10px;
+            /* Optional: Rounded corners */
+            padding: 20px;
+            /* Optional: Inner spacing */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /* Optional: Shadow for depth */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="frosted-glass">
+        This is a frosted glass effect!
+    </div>
+
+</body>
+
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container">
+        <div class="box">
+            <div class="sub-box blackBox"></div>
+        </div>
+        <div class="box">
+            <div class="sub-box blackBox"></div>
+        </div>
+        <div class="box">
+            <div class="sub-box blackBox"></div>
+        </div>
+        <div class="box">
+            <div class="sub-box blackBox"></div>
+        </div>
+        <div class="box">
+            <div class="sub-box blackBox"></div>
+        </div>
+    </div>
+    <script>
+        let boxes = document.querySelectorAll(".box");
+        let black = document.querySelectorAll(".sub-box");
+        console.log(boxes)
+
+        let container = document.querySelector(".container");
+        container.addEventListener("mouseover", (event) => {
+            if (event.target.classList.contains("box")) {
+                event.target.classList.add("bg-color");
+
+                let subBox = event.target.querySelector(".sub-box");
+                if (subBox) {
+                    subBox.classList.add("blacked");
+                }
+            }
+        })
+
+        container.addEventListener("mouseout", (event) => {
+            if(event.target.classList.contains("box")){
+                event.target.classList.remove("bg-color");
+                let subBox = event.target.querySelector(".sub-box");
+                    subBox.classList.remove("blacked");
+
+            }
+        })
+
+
+        let container = document.querySelector(".container");
+
+        container.addEventListener("mouseover", (event) => {
+            // Check if the hovered element is a box
+            if (event.target.classList.contains("box")) {
+                event.target.classList.add("bg-color");
+                let subBox = event.target.querySelector(".sub-box");
+                if (subBox) {
+                    subBox.classList.add("blacked");
+                }
+            }
+        });
+
+        container.addEventListener("mouseleave", (event) => {
+            // Check if the mouse left a box
+            if (event.target.classList.contains("box")) {
+                event.target.classList.remove("bg-color");
+                let subBox = event.target.querySelector(".sub-box");
+                if (subBox) {
+                    subBox.classList.remove("blacked");
+                }
+            }
+        });
+
+
+    </script> -->
+</body>
+
+</html>
