@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 [
     {
       "id": 1,
@@ -45,52 +44,4 @@
       "description": "Experience the iconic sights and sounds of the Big Apple, from Times Square to Central Park.",
       "highlights": ["Times Square", "Central Park", "Statue of Liberty", "Empire State Building"]
     }
-=======
-[
-    {
-      "id": 1,
-      "name": "Rome, Italy",
-      "image": "assets/destiimg.PNG",
-      "price": 5420,
-      "duration": "10 Days",
-      "description": "Explore the Colosseum, Vatican City, and more...",
-      "highlights": ["Colosseum", "Vatican City", "Trevi Fountain", "Pantheon"]
-    },
-    {
-      "id": 2,
-      "name": "London, UK",
-      "image": "assets/destiimg.PNG",
-      "price": 4200,
-      "duration": "10 Days",
-      "description": "Visit Buckingham Palace, Tower of London, and enjoy the city's vibrant culture.",
-      "highlights": ["Buckingham Palace", "Tower of London", "British Museum", "Hyde Park"]
-    },
-    {
-      "id": 3,
-      "name": "Paris, France",
-      "image": "assets/destiimg.PNG",
-      "price": 3800,
-      "duration": "7 Days",
-      "description": "Experience the Eiffel Tower, Louvre Museum, and the charming streets.",
-      "highlights": ["Eiffel Tower", "Louvre Museum", "Notre Dame Cathedral", "Seine River Cruise"]
-    },
-    {
-      "id": 4,
-      "name": "Tokyo, Japan",
-      "image": "assets/destiimg.PNG",
-      "price": 7500,
-      "duration": "14 Days",
-      "description": "Immerse yourself in the vibrant culture of Tokyo, with its bustling streets, ancient temples, and modern marvels.",
-      "highlights": ["Tokyo Skytree", "Senso-ji Temple", "Shibuya Crossing", "Imperial Palace"]
-    },
-    {
-      "id": 5,
-      "name": "New York City, USA",
-      "image": "assets/destiimg.PNG",
-      "price": 4800,
-      "duration": "7 Days",
-      "description": "Experience the iconic sights and sounds of the Big Apple, from Times Square to Central Park.",
-      "highlights": ["Times Square", "Central Park", "Statue of Liberty", "Empire State Building"]
-    }
->>>>>>> 0ad2572598616639a25e3ed43293b760ceca7032
   ]
