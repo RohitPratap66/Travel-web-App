@@ -7,43 +7,51 @@ let card4 = document.getElementById("s2-card-box4");
 function cardDetails(element, callback1, callback2, callback3) {
 
     element.addEventListener("mouseenter", () => {
-        if (element == card1) {
-            card1.classList.add("more-detail-card1", "new-styles-card");
-            document.getElementById("card1-img").classList.add("new-styles-img-card1");
-            document.querySelector(".sub-b1-head").classList.add("new-heding-styles-card1");
-            document.querySelector(".content-b1").classList.add("new-content-styles-card1");
-            document.querySelector(".sub-b1-head").innerHTML = "Precise Weather Report";
-            callback1();
-            document.querySelector(".weather").classList.add("cardsBtn", 'animateBtn');
-            callback3();
+        let cardmedia = window.matchMedia('(min-width:589px)')
+        if (cardmedia.matches) {
+            console.log('cardmedia is matching!')
+            if (element == card1) {
+                card1.classList.add("more-detail-card1", "new-styles-card");
+                document.getElementById("card1-img").classList.add("new-styles-img-card1");
+                document.querySelector(".sub-b1-head").classList.add("new-heding-styles-card1");
+                document.querySelector(".content-b1").classList.add("new-content-styles-card1");
+                document.querySelector(".sub-b1-head").innerHTML = "Precise Weather Report";
+                callback1();
+                document.querySelector(".weather").classList.add("cardsBtn", 'animateBtn');
+                callback3();
 
-        } else if (element == card2) {
-            card2.classList.add("more-detail-card1", "new-styles-card");
-            document.getElementById("card2-img").classList.add("new-styles-img-card2");
-            document.querySelector(".sub-b2-head").classList.add("new-heding-styles-card2");
-            document.querySelector(".content-b2").classList.add("new-content-styles-card2");
-            document.querySelector(".sub-b2-head").innerHTML = " Find the Best Flights for Your Budget"
-            callback1();
-            document.querySelector(".Flight").classList.add("cardsBtn", 'animateBtn');
-            callback3();
-        }
-        else if (element == card3) {
-            card3.classList.add("more-detail-card1", "new-styles-card");
-            document.getElementById("card3-img").classList.add("new-styles-img-card3");
-            document.querySelector(".sub-b3-head").classList.add("new-heding-styles-card3");
-            document.querySelector(".content-b3").classList.add("new-content-styles-card3");
-            document.querySelector(".sub-b3-head").innerHTML = " Discover Exciting Local Events"
-            callback1();
-            document.querySelector(".events").classList.add("cardsBtn", 'animateBtn');
-            callback3();
-        }
-        else if (element == card4) {
-            card4.classList.add("more-detail-card1", "new-styles-card");
-            document.getElementById("card4-img").classList.add("new-styles-img-card4");
-            document.querySelector(".sub-b4-head").classList.add("new-heding-styles-card4");
-            document.querySelector(".content-b4").classList.add("new-content-styles-card4");
-            document.querySelector(".sub-b4-head").innerHTML = "Create Your Dream Trip with Customization"
-            callback1();
+            } else if (element == card2) {
+                card2.classList.add("more-detail-card1", "new-styles-card");
+                document.getElementById("card2-img").classList.add("new-styles-img-card2");
+                document.querySelector(".sub-b2-head").classList.add("new-heding-styles-card2");
+                document.querySelector(".content-b2").classList.add("new-content-styles-card2");
+                document.querySelector(".sub-b2-head").innerHTML = " Find the Best Flights for Your Budget"
+                callback1();
+                document.querySelector(".Flight").classList.add("cardsBtn", 'animateBtn');
+                callback3();
+            }
+            else if (element == card3) {
+                card3.classList.add("more-detail-card1", "new-styles-card");
+                document.getElementById("card3-img").classList.add("new-styles-img-card3");
+                document.querySelector(".sub-b3-head").classList.add("new-heding-styles-card3");
+                document.querySelector(".content-b3").classList.add("new-content-styles-card3");
+                document.querySelector(".sub-b3-head").innerHTML = " Discover Exciting Local Events"
+                callback1();
+                document.querySelector(".events").classList.add("cardsBtn", 'animateBtn');
+                callback3();
+            }
+            else if (element == card4) {
+                card4.classList.add("more-detail-card1", "new-styles-card");
+                document.getElementById("card4-img").classList.add("new-styles-img-card4");
+                document.querySelector(".sub-b4-head").classList.add("new-heding-styles-card4");
+                document.querySelector(".content-b4").classList.add("new-content-styles-card4");
+                document.querySelector(".sub-b4-head").innerHTML = "Create Your Dream Trip with Customization"
+                callback1();
+            }
+
+        } else {
+            console.log('cardmedia is not matching!');
+
         }
     })
 
@@ -89,6 +97,7 @@ cardDetails(card3, () => addBtn(card3), () => removeBtn(card3), AniBtn);
 cardDetails(card4, () => addBtn(card4), () => removeBtn(card4));
 
 function addBtn(card) {
+
     if (card.classList.contains("box1")) {
         let card1Btn = document.createElement("button");
         card1Btn.setAttribute('class', 'weather');
@@ -109,12 +118,8 @@ function addBtn(card) {
         card3Btn.innerText = 'Explore Events';
         document.querySelector(".box3").insertAdjacentElement('beforeend', card3Btn);
     }
-    // if (card.classList.contains("box4")) {
-    //     let card4Btn = document.createElement("button");
-    //     card4Btn.setAttribute('class', 'custom');
-    //     card4Btn.innerText = "Customize"
-    //     document.querySelector(".box4").insertAdjacentElement('beforeend', card4Btn);
-    // }
+
+
 }
 
 function removeBtn(cards) {
@@ -328,29 +333,6 @@ function MoreDesti() {
     })
 
 }
-
-// function cardHover(){
-//    let cont = document.querySelector(".visible-area");
-//    cont.addEventListener("mouseenter", (event) => {
-//     let card1 = event.target.closest("s3-card1");
-//     if(card1){
-//         card1.classList.add("s3-card-details");
-//     }
-//     else{
-//         console.log("error")
-//     }
-//    })
-// }
-
-// cardHover();
-
-// <div id="weather">
-//     <input id="cityinput" type="text" placeholder="Enter city name">
-//     <button id="btn">Check Weather</button>
-//     <p id="city"></p>
-//     <p id="temp"></p>
-//     <p id="desc"></p>
-//   </div>
 
 const WeatherHTMl = `
 
@@ -681,16 +663,16 @@ function menuOpen() {
             MenuSection.classList.add("menuSecDnone")
         }
         MenuBtn.addEventListener('click', () => {
-navDock.classList.toggle("show")
+            navDock.classList.toggle("show")
         })
 
 
         MenuBtn.addEventListener("click", () => {
-            
-            if(!MenuSection.classList.contains("menuSecDnone")){
-               MenuSection.classList.add('menuSecDnone') 
-               
-            }else{
+
+            if (!MenuSection.classList.contains("menuSecDnone")) {
+                MenuSection.classList.add('menuSecDnone')
+
+            } else {
                 MenuSection.classList.remove("menuSecDnone")
             }
         })
@@ -778,9 +760,28 @@ function Wopener() {
 
 Wopener()
 
-const navBar = () => {
+let TryingBtn = (e) => {
+    let btnsMedia = window.matchMedia('(min-width:588px)')
+    if(btnsMedia.matches){
+        
+        // let btnContainer = document.querySelector(".box1 ")
+        // if (btnContainer.contains(document.querySelector(".WbtnDnone"))) {
+        //     document.querySelector(".WbtnDnone").remove()
+        // } else{
+        //     console.log('it does not')
+        // }
+        let Allcards = document.querySelectorAll(".s2-box")
+        Allcards.forEach((element) => {
+            if( element.contains(document.querySelector(".WbtnDnone"))){
+                document.querySelector(".WbtnDnone").remove()
+            } else{
+                console.log('it does not contains')
+            }
+        })
 
+    }
 }
+TryingBtn()
 
 
 

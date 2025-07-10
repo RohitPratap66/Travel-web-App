@@ -1013,7 +1013,7 @@
 
 
         /* ///// */
-        /* .section1 {
+        .section1 {
             background-color: pink;
         }
 
@@ -1039,7 +1039,7 @@
 
         .section7 {
             background-color: rgb(174, 181, 187);
-        } */
+        }
 
 
 
@@ -1606,7 +1606,18 @@
         .menuSecDnone {
             display: none;
         }
-        
+
+        .weather {
+            border: none;
+            background-color: #f1a501;
+            padding: 9px 14px 9px 14px;
+            font-size: 9px;
+            color: white;
+            border-radius: 14px 3px 14px 3px;
+            cursor: pointer;
+            font-weight: 500;
+            font-family: "Poppins";
+        }
 
 
 
