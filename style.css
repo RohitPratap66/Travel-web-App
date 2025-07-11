@@ -550,12 +550,12 @@
         }
 
         .s5-cont1 {
-            border: 1px solid black;
+            /* border: 1px solid black; */
             width: 48%;
         }
-        .s5-cont1-subCont{
+        /* .s5-cont1-subCont{
             border: 1px solid red;
-        }
+        } */
 
         .s5-cont2 {
             /* border: 1px solid rgb(250, 0, 0); */
