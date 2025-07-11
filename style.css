@@ -550,8 +550,11 @@
         }
 
         .s5-cont1 {
-            /* border: 1px solid black; */
+            border: 1px solid black;
             width: 48%;
+        }
+        .s5-cont1-subCont{
+            border: 1px solid red;
         }
 
         .s5-cont2 {
@@ -1728,9 +1731,9 @@
                 height: 100%;
             }
 
-            .s5-cont1 {
+            /* .s5-cont1 {
                 height: 517px;
-            }
+            } */
 
             .s5-cont2 {
                 width: 95%;
