@@ -553,6 +553,7 @@
             /* border: 1px solid black; */
             width: 48%;
         }
+
         /* .s5-cont1-subCont{
             border: 1px solid red;
         } */
@@ -1622,11 +1623,287 @@
             font-family: "Poppins";
         }
 
+        .S1btns {
+            transform: translateY(50px);
+            transition: transform 700ms;
+            opacity: 0;
+        }
 
+        .S1btns.show {
+            transform: translateY(0px);
+            transition: transform 500ms ease-in-out;
+            opacity: 1;
+        }
 
+        .s-cont1 {
+            transform: translateX(-200px);
+            transition: transform 600ms;
+            opacity: 0;
+        }
 
+        .s-cont1.showCont1 {
+            transform: translateX(0px);
+            transition: transform 500ms ease-in-out;
+            opacity: 1;
+        }
 
+        .s-img {
+            transform: scale(0);
+            transition: transform 500ms;
+        }
 
+        .s-img.showimg {
+            transform: scale(1);
+            transition: transform 500ms 100ms;
+        }
+
+        .s2-box {
+            transform: scale(0);
+            transition: transform 500ms ease-in-out;
+        }
+
+        .s2-box.showCards {
+            transform: scale(1);
+            transition: transform 500ms ease-in-out;
+        }
+
+        .s-main-head {
+            transform: translateY(50px);
+            transition: transform 300ms;
+            opacity: 0;
+        }
+
+        .s-main-head.showMH {
+            transform: translateY(0px);
+            transition: transform 300ms;
+            opacity: 1;
+        }
+
+        .s4-main-head {
+            transform: translateY(-70px);
+            transition: transform 300ms;
+            opacity: 0;
+        }
+
+        .s4-main-head.showS4MH {
+            transform: translateY(0px);
+            transition: transform 300ms;
+            opacity: 1;
+        }
+
+        .box-CD {
+            transform: translateX(-90px);
+            transition: transform 500ms ease-in-out;
+            opacity: 0;
+        }
+
+        .box-CD.showboxCD {
+            transform: translateX(0px);
+            transition: transform 500ms ease-in-out;
+            opacity: 1;
+        }
+
+        .box-MP {
+            transform: translateX(-90px);
+            transition: transform 500ms ease-in-out;
+            opacity: 0;
+        }
+
+        .box-MP.showboxMP {
+            transform: translateX(0px);
+            transition: transform 500ms ease-in-out 520ms;
+            opacity: 1;
+        }
+
+        .box-RASD {
+            transform: translateX(-90px);
+            transition: transform 500ms ease-in-out;
+            opacity: 0;
+        }
+
+        .box-RASD.showboxRASD {
+            transform: translateX(0px);
+            transition: transform 500ms ease-in-out 550ms;
+            opacity: 1;
+        }
+
+        .trip-cont-img {
+            transform: scale(0);
+            transition: transform 500ms;
+            opacity: 0;
+        }
+
+        .trip-cont-img.showS4TripImg {
+            transform: scale(1);
+            transition: transform 500ms;
+            opacity: 1;
+        }
+
+        .s4-cont2-head {
+            transform: translateY(-50px);
+            transition: 500ms;
+            opacity: 0;
+        }
+
+        .s4-cont2-head.showS4ContHead {
+            transform: translateY(0px);
+            transition: transform 500ms;
+            opacity: 1;
+        }
+
+        .s4-cont2-date {
+            opacity: 0;
+            transition: opacity 500ms;
+        }
+
+        .s4-cont2-date.showS4Date {
+            opacity: 1;
+            transition: opacity 500ms;
+        }
+
+        .s4-options {
+            opacity: 0;
+            transition: opacity 500ms;
+        }
+
+        .s4-options.showS4Options {
+            opacity: 1;
+            transition: opacity 500ms 550ms;
+        }
+
+        .s4-quant {
+            opacity: 0;
+            transition: opacity 500ms;
+        }
+
+        .s4-quant.showS4Quant {
+            opacity: 1;
+            transition: opacity 500ms 600ms;
+        }
+
+        .s4-sub-cont2 {
+            transform: translateX(30px);
+            transition: transform 500ms;
+            opacity: 0;
+        }
+
+        .s4-sub-cont2.showS4Minicont {
+            transform: translateX(0px);
+            transition: transform 500ms;
+            opacity: 1;
+        }
+
+        .s5-cont1 {
+            transform: translateX(-50px);
+            transition: transform 500ms;
+            opacity: 0;
+        }
+
+        .s5-cont1.showS5C1 {
+            transform: translateX(0px);
+            transition: transform 500ms;
+            opacity: 1;
+        }
+
+        .s5-cont2 {
+            transform: translateX(50px);
+            transition: transform 500ms;
+            opacity: 0;
+        }
+
+        .s5-cont2.showS5C2 {
+            transform: translateX(0px);
+            transition: transform 500ms;
+            opacity: 1;
+        }
+
+        .testi-img {
+            transform: scale(1.4) rotateY(0deg);
+            transition: transform 500ms;
+        }
+
+        .testi-img.showTestiImg {
+            transform: scale(1) rotateY(360deg);
+            transition: transform 500ms 700ms;
+        }
+
+        .CLogo {
+            opacity: 0;
+            transition: opacity 500ms;
+        }
+
+        .CLogo.showCL {
+            opacity: 1;
+            transition: opacity 500ms;
+        }
+
+        .s6-subscribe-head {
+            opacity: 0;
+            transition: opacity 500ms;
+        }
+
+        .s6-subscribe-head.showSubsHead {
+            opacity: 1;
+            transition: opacity 500ms;
+        }
+
+        .s6-subscribe-head {
+            opacity: 0;
+            transition: opacity 500ms;
+        }
+
+        .s6-subscribe-head.showSubsHeadM {
+            opacity: 1;
+            transition: opacity 500ms;
+        }
+
+        .s6-mail-section {
+            transform: scale(0);
+            transition: transform 500ms;
+            opacity: 0;
+        }
+
+        .s6-mail-section.showS6MS {
+            transform: scale(1);
+            transition: transform 500ms;
+            opacity: 1;
+        }
+
+        .s6-mail-section {
+            transform: scale(0);
+            transition: transform 500ms;
+            opacity: 0;
+        }
+
+        .s6-mail-section.showS6MSM {
+            transform: scale(1);
+            transition: transform 500ms;
+            opacity: 1;
+        }
+
+        .s5-cont1M {
+            transform: translateX(0px);
+            opacity: 0;
+            transition: opacity 500ms;
+        }
+
+        .s5-cont1M.showCont1FM {
+            opacity: 1;
+            transition: opacity 500ms;
+        }
+
+        .s5-cont2M {
+            transform: translateX(0px);
+            opacity: 0;
+            transition: opacity 500ms;
+        }
+
+        .s5-cont2M.showCont2FM {
+            opacity: 1;
+            transition: opacity 500ms 650ms;
+        }
+
+        
 
         /*///////////MEDIA.CSS code starated from here./////////////// */
 

@@ -192,6 +192,7 @@
         flex-direction: column;
         gap: 10px;
         animation: fadeSlide 0.3s ease-in-out;
+        z-index: 2;
     }
 
     .nav-dock.show {
@@ -529,5 +530,19 @@
 @media (min-width: 1300px){
     .s5-cont1-subCont{
         max-width: 60%;
+    }
+}
+@media (max-width:500px) and (min-width: 400px){
+    .s5-cont2{
+        width: 87%;
+    }
+}
+@media (max-width:375px){
+    .thoughts{
+        font-size: 1.3rem;
+        width: 61vw;
+    }
+    .s5-cont1{
+        width: 100%;
     }
 }

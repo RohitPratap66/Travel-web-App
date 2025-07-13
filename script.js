@@ -762,19 +762,13 @@ Wopener()
 
 let TryingBtn = (e) => {
     let btnsMedia = window.matchMedia('(min-width:588px)')
-    if(btnsMedia.matches){
-        
-        // let btnContainer = document.querySelector(".box1 ")
-        // if (btnContainer.contains(document.querySelector(".WbtnDnone"))) {
-        //     document.querySelector(".WbtnDnone").remove()
-        // } else{
-        //     console.log('it does not')
-        // }
+    if (btnsMedia.matches) {
+
         let Allcards = document.querySelectorAll(".s2-box")
         Allcards.forEach((element) => {
-            if( element.contains(document.querySelector(".WbtnDnone"))){
+            if (element.contains(document.querySelector(".WbtnDnone"))) {
                 document.querySelector(".WbtnDnone").remove()
-            } else{
+            } else {
                 console.log('it does not contains')
             }
         })
@@ -783,7 +777,152 @@ let TryingBtn = (e) => {
 }
 TryingBtn()
 
+function heroSectionObserver() {
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show", "showimg", "showCont1", "showCards", "showMH")
+            } else {
+                // entry.target.classList.remove("show", "showimg", "showCont1", "showCards", "showMH")
+            }
+        })
+    }, {
+        threshold: 0.1,
+        rootMargin: "-50px"
+    })
+
+    let btns1 = document.querySelectorAll(".S1btns");
+    let S1cont = document.querySelector(".s-cont1");
+    let S2cards = document.querySelectorAll(".s2-box");
+    let SmainHeads = document.querySelectorAll(".s-main-head");
+    observer.observe(S1cont)
+
+    btns1.forEach((btn) => {
+        observer.observe(btn)
+    })
+
+    let S1img = document.querySelector(".s-img")
+    observer.observe(S1img)
+
+    S2cards.forEach((card) => {
+        observer.observe(card)
+    })
+
+    SmainHeads.forEach((heading) => {
+        observer.observe(heading)
+    })
+
+}
+
+heroSectionObserver()
 
 
+function section4Observer() {
+
+    const observer02 = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("showS4MH", "showboxCD", "showboxMP", "showboxRASD", "showS4TripImg", "showS4ContHead", "showS4Date", "showS4Options", "showS4Quant", "showS4Minicont")
+            }
+            else {
+                // entry.target.classList.remove("showS4MH", "showboxCD", "showboxMP", "showboxRASD", "showS4TripImg", "showS4ContHead", "showS4Date", "showS4Options", "showS4Quant", "showS4Minicont")
+            }
+        })
+
+    }, {
+        threshold: 0.6,
+        rootMargin: "-40px"
+    })
+
+    let S4mh = document.querySelector(".s4-main-head");
+    observer02.observe(S4mh)
+
+    let S4box = document.querySelectorAll(".s4-box");
+    S4box.forEach((item) => {
+        observer02.observe(item)
+    })
+
+    document.querySelectorAll(".S4SubContItem").forEach((item) => {
+        observer02.observe(item)
+    })
+
+    let Minicont = document.querySelector(".s4-sub-cont2")
+    observer02.observe(Minicont)
+
+}
+
+section4Observer()
+
+
+function section5Observer() {
+    let mediaS5items = window.matchMedia('(min-width:830px)')
+    const observer03 = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (mediaS5items.matches) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("showS5C1", "showS5C2", "showTestiImg", "showCL", "showSubsHead", "showS6MS")
+                } else {
+                    // entry.target.classList.remove("showS5C1", "showS5C2", "showTestiImg", "showCL", "showSubsHead","showS6MS")
+                }
+            }
+        })
+    }, {
+        threshold: 0.4,
+        rootMargin: "-100px"
+    })
+
+    document.querySelectorAll(".S5OBcont").forEach((item) => {
+        observer03.observe(item)
+    })
+
+    let TestiImg = document.querySelector(".testi-img")
+    observer03.observe(TestiImg)
+
+    document.querySelectorAll(".CLogo").forEach((item) => {
+        observer03.observe(item)
+    })
+
+    let SubsHead = document.querySelector(".s6-subscribe-head")
+    observer03.observe(SubsHead)
+
+    let SubsMailS = document.querySelector(".s6-mail-section")
+    observer03.observe(SubsMailS)
+}
+
+section5Observer()
+
+function section5Mobserver() {
+    let observerMediaM = window.matchMedia('(max-width: 830px)')
+    const observer04 = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (observerMediaM.matches) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("showCont1FM", "showCont2FM", "showTestiImg","showSubsHeadM","showS6MSM","showDestiAni")
+                }
+            }
+        })
+    }, {
+        threshold: 0.7
+    })
+    document.querySelectorAll(".S5OBcont").forEach((item) => {
+        observer04.observe(item)
+    })
+
+    let TestiImgM = document.querySelector(".testi-img")
+    observer04.observe(TestiImgM)
+
+    let SubsHeadM = document.querySelector(".s6-subscribe-head")
+    observer04.observe(SubsHeadM)
+
+    let SubsMailSM = document.querySelector(".s6-mail-section")
+    observer04.observe(SubsMailSM)
+
+    let desticaro = document.querySelector(".s3-card-cont")
+    observer04.observe(desticaro)
+}
+
+section5Mobserver()
 
 
